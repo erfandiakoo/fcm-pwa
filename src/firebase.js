@@ -30,7 +30,7 @@ export const getOrRegisterServiceWorker = () => {
 export const getFirebaseToken = () =>
     getOrRegisterServiceWorker()
         .then((serviceWorkerRegistration) =>
-            getToken(messaging, { vapidKey: 'f94acmq2yPxVhH0jaDLj1RZFcIdpS--wE1dRC1K8SH8', serviceWorkerRegistration }));
+            getToken(messaging, { vapidKey: '', serviceWorkerRegistration }));
 
 export const onForegroundMessage = () =>
     new Promise((resolve) => onMessage(messaging, (payload) => resolve(payload)));
